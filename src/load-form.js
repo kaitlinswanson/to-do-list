@@ -2,7 +2,7 @@
 
 
 export function loadForm() {
-//this code needs to reveal the form. id and class is "formSpace"
+    document.getElementById('formSpace').style.display = "flex"
 
 }
 
