@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="styles.css" rel="stylesheet">
+
+    <title>To Do List</title>
+</head>
+<body>
+    <div class="buttonList" id="buttonHolder">
+    <button id ="newTask">New Task</button>
+    <button id="allProjects">All Projects</button>
+    <button id="allTasks">All Tasks</button>
+</div>
+
+<form class="formSpace" id="formSpace">
+    <label for="title">Title</label>
+    <input type="text" name="title" id="title" required>
+
+    <label for="description">Description</label>
+    <input type="text" name="description" id="description" required>
+
+    <label for="dueDate">Due Date</label>
+    <input type="date" name="dueDate" id="dueDate" required>
+
+<div id='checkBox'>
+    <label for="priority">Priority Level:</label>
+    <input type="checkbox" name="low" id="low" value="low">
+    <input type="checkbox" name="medium" id="medium" value="medium">
+    <input type="checkbox" name="high" id="high" value="high">
+
+</div>
+<button type='submit' form='form' id='submitButton'>Add Task</button>
+
+</form>
+</body>
+<script src=main.js></script>
+</html>
+
