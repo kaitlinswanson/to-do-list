@@ -5,8 +5,13 @@ import { addTask } from './add-task.js'
 
 import { createTask } from './create-task.js'
 //this page will be for my buttons to lead to functions located on different modules 
-// to dos will be objects
-//create using factories or constructor or classes 
+
+
+//NEXT: make "remove" and "completed" buttons work
+//NEXT: add project option on pop up form and store each task within specified project 
+//NEXT: make "All projects" and "All tasks" buttons work
+//NEXT: use "localStorage" to save user's prkect between sessions
+
 
 export function Task(title, description, dueDate, priorityLevel) {
   this.title = title.value
