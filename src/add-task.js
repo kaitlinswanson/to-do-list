@@ -2,11 +2,17 @@
 
 import { Task } from './index.js'
 import { myTasks } from './index.js'
+import { display } from './index.js'
 
-
+//PRIORITY LEVEL NEEDS TO BE ADDED BACK AS PARAM
 export function addTask() {
-    const task = new Task(title, dueDate, description, priorityLevel); 
-    myTasks.push(task);
-
+    event.preventDefault(); 
     document.getElementById('formSpace').style.display = "none"
+
+    const newTask = new Task(title, description, dueDate); 
+    myTasks.push(newTask);
+
+
+    display();
+
 }
