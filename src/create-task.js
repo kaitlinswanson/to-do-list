@@ -1,13 +1,13 @@
 import { myTasks } from './index.js'
 
-
+//add a remove button to this page so it is created inside of the displayed task
 
 export function createTask(item) {
     const taskDiv = document.createElement('div');
     const titleDiv = document.createElement('div');
     const descriptionDiv = document.createElement('div');
     const dueDateDiv = document.createElement('div');
-   // const priorityLevel = document.createElement('div');
+    const priorityLevelDiv = document.createElement('div');
 
     taskDiv.classList.add('tasks'); 
     taskDiv.setAttribute('id', myTasks.indexOf(item)); 
@@ -23,6 +23,10 @@ export function createTask(item) {
     dueDateDiv.textContent = item.dueDate; 
     dueDateDiv.classList.add('dueDate'); 
     taskDiv.appendChild(dueDateDiv); 
+
+    priorityLevelDiv.textContent = item.priorityLevel;
+    priorityLevelDiv.classList.add('priorityLevel');
+    taskDiv.appendChild(priorityLevelDiv);
 
     document.getElementById('taskDisplay').appendChild(taskDiv); 
 }

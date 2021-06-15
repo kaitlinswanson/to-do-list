@@ -6,4 +6,3 @@ export function loadForm() {
 
 }
 
-// export submit button

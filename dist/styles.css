@@ -47,6 +47,7 @@
 
 
   #formSpace {
+    color: white;
     display: none;
     flex-direction: column;
     width: 100%;
@@ -60,3 +61,13 @@
     align-content: center;
 
 }
+
+.tasks { 
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border: 10px; 
+    border-color: darkgray;
+    padding: 10px;
+    border-style: solid;
+    margin-top: 30px;
+}
+
