@@ -7,7 +7,6 @@ import { createTask } from './create-task.js'
 //this page will be for my buttons to lead to functions located on different modules 
 
 
-//NEXT: make "remove" and "completed" buttons work
 //NEXT: add project option on pop up form and store each task within specified project 
 //NEXT: make "All projects" and "All tasks" buttons work
 //NEXT: use "localStorage" to save user's prkect between sessions

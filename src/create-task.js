@@ -1,6 +1,6 @@
 import { myTasks } from './index.js'
+import { display } from './index.js'
 
-//add a remove button and "task complete" button to this page so it is created inside of the displayed task
 
 export function createTask(item) {
     const taskDiv = document.createElement('div');
@@ -35,12 +35,23 @@ export function createTask(item) {
     removeTaskButton.textContent = "Remove"; 
     removeTaskButton.classList.add('removeTaskButton'); 
     taskDiv.appendChild(removeTaskButton);
+    removeTaskButton.setAttribute('id', 'remove');
 
     completeButton.textContent = "Completed"; 
     completeButton.classList.add('completeButton'); 
     taskDiv.appendChild(completeButton); 
-
+    completeButton.setAttribute('id', 'complete');
 
     //adds entire task to display div
     document.getElementById('taskDisplay').appendChild(taskDiv); 
+
+    removeTaskButton.addEventListener('click', () => { 
+        myTasks.splice(myTasks.indexOf(item), 1);
+        display(); 
+    });
+
+    completeButton.addEventListener('click', () => {
+        myTasks.splice(myTasks.indexOf(item), 1); 
+        display();
+    })
 }
