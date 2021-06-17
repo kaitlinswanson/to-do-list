@@ -1,6 +1,5 @@
-//set up tab switching structure
 
-function loadProjects() { 
+export function loadProjects() { 
 
-    document.querySelectorAll('project')
+    console.log("working")
 } 

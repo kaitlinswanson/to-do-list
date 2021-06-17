@@ -4,6 +4,10 @@ import {loadForm } from './load-form.js'
 import { addTask } from './add-task.js'
 
 import { createTask } from './create-task.js'
+
+import { loadTasks } from './load-tasks.js'
+
+import { loadProjects } from './load-projects.js'
 //this page will be for my buttons to lead to functions located on different modules 
 const tabs = document.querySelectorAll('[data-tab-target]')
 const tabContents = document.querySelectorAll('[data-tab-content')
@@ -22,7 +26,11 @@ tabs.forEach(tab => {
     })
 })
 
+const taskTab = document.getElementById('allTaskTab'); 
+taskTab.addEventListener('click', loadTasks)
 
+const projectTab = document.getElementById('allProjectsTab'); 
+projectTab.addEventListener('click', loadProjects);
 
 //NEXT: add project option on pop up form and store each task within specified project 
 //NEXT: make "All projects" and "All tasks" buttons work
@@ -81,6 +89,3 @@ export function display() {
         createTask(myTasks[i]);
     }
 }
-
-
-   

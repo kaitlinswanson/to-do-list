@@ -11,8 +11,8 @@
 <body>
     <ul class="tabs">
         <li data-tab-target="#home" class="active tab">Home</li>
-        <li data-tab-target="#allProjects" class="tab">All Projects</li>
-        <li data-tab-target="#allTasks" class="tab">All Tasks</li>
+        <li data-tab-target="#allProjects" class="tab" id="allProjectsTab">All Projects</li>
+        <li data-tab-target="#allTasks" class="tab" id="allTaskTab">All Tasks</li>
     </ul>
     <div class="tab-content">
         <div id = "allProjects" data-tab-content>
@@ -27,8 +27,7 @@
     <div id = "home" data-tab-content class="active">
     <div class="buttonList" id="buttonHolder">
     <button id ="newTask">New Task</button>
-    <button id="allProjects">All Projects</button>
-    <button id="allTasks">All Tasks</button>
+
     </div>
 
 <form class="formSpace" id="formSpace">
@@ -66,4 +65,3 @@
 </body>
 <script src=main.js></script>
 </html>
-
