@@ -32,8 +32,6 @@ taskTab.addEventListener('click', loadTasks)
 const projectTab = document.getElementById('allProjectsTab'); 
 projectTab.addEventListener('click', loadProjects);
 
-//NEXT: add project option on pop up form and store each task within specified project 
-//NEXT: make "All projects" and "All tasks" buttons work
 //NEXT: use "localStorage" to save user's prkect between sessions
 
 
@@ -48,6 +46,8 @@ export function Task(title, description, dueDate, priorityLevel, project) {
 
 export let myTasks = [] 
 
+
+    
 
 const newTask = document.getElementById("newTask");
 newTask.addEventListener ('click', () => {
@@ -89,3 +89,7 @@ export function display() {
         createTask(myTasks[i]);
     }
 }
+export function setData () {
+    localStorage.setItem(`myTasks`, JSON.stringify(myTasks));
+    }
+

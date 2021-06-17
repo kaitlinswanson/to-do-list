@@ -1,6 +1,6 @@
 import { myTasks } from './index.js'
 import { display } from './index.js'
-
+import { setData } from './index.js'
 
 export function createTask(item) {
     const taskDiv = document.createElement('div');
@@ -49,6 +49,7 @@ export function createTask(item) {
 
     //adds entire task to display div
     document.getElementById('taskDisplay').appendChild(taskDiv); 
+   
 
     removeTaskButton.addEventListener('click', () => { 
         myTasks.splice(myTasks.indexOf(item), 1);
@@ -58,5 +59,8 @@ export function createTask(item) {
     completeButton.addEventListener('click', () => {
         myTasks.splice(myTasks.indexOf(item), 1); 
         display();
+
+       
     })
 }
+
