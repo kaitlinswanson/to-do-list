@@ -11,7 +11,7 @@ export function addTask() {
     event.preventDefault(); 
     document.getElementById('formSpace').style.display = "none"
     priorityCheck ();
-    const newTask = new Task(title, description, dueDate, priorityLevel); 
+    const newTask = new Task(title, description, dueDate, priorityLevel, project); 
     myTasks.push(newTask);
 
 

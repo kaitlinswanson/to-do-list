@@ -8,6 +8,7 @@ export function createTask(item) {
     const descriptionDiv = document.createElement('div');
     const dueDateDiv = document.createElement('div');
     const priorityLevelDiv = document.createElement('div');
+    const projectDiv = document.createElement('div');
 
     const removeTaskButton  = document.createElement('button'); 
     const completeButton = document.createElement('button');
@@ -30,6 +31,10 @@ export function createTask(item) {
     priorityLevelDiv.textContent = item.priorityLevel;
     priorityLevelDiv.classList.add('priorityLevel');
     taskDiv.appendChild(priorityLevelDiv);
+
+    projectDiv.textContent = item.project; 
+    projectDiv.classList.add('project');
+    taskDiv.appendChild(projectDiv);
 
     //buttons for each task
     removeTaskButton.textContent = "Remove"; 

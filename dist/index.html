@@ -9,11 +9,27 @@
     <title>To Do List</title>
 </head>
 <body>
+    <ul class="tabs">
+        <li data-tab-target="#home" class="active tab">Home</li>
+        <li data-tab-target="#allProjects" class="tab">All Projects</li>
+        <li data-tab-target="#allTasks" class="tab">All Tasks</li>
+    </ul>
+    <div class="tab-content">
+        <div id = "allProjects" data-tab-content>
+            <h1>All Projects</h1>
+            <p>this will display all projects</p>
+        </div>
+        
+        <div id="allTasks" data-tab-content>
+            <h1>All Tasks</h1>
+            <p>this will display all tasks</p>
+        </div>
+    <div id = "home" data-tab-content class="active">
     <div class="buttonList" id="buttonHolder">
     <button id ="newTask">New Task</button>
     <button id="allProjects">All Projects</button>
     <button id="allTasks">All Tasks</button>
-</div>
+    </div>
 
 <form class="formSpace" id="formSpace">
     <label for="title">Title</label>
@@ -21,6 +37,9 @@
 
     <label for="description">Description</label>
     <input type="text" name="description" id="description" required>
+
+    <label for="project">Project List</label>
+    <input type="text" name="project" id="project" required>
 
     <label for="dueDate">Due Date</label>
     <input type="date" name="dueDate" id="dueDate" required>
@@ -32,11 +51,18 @@
     <input type="checkbox" name="high" id="high" value="high"> High
 
 </div>
+
 <button type='submit' form='form' id='submitButton'>Add Task</button>
 </form>
 <div class="taskDisplay" id="taskDisplay">
 
+    </div>
+    </div>
+
+
 </div>
+
+
 </body>
 <script src=main.js></script>
 </html>

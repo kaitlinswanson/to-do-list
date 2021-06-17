@@ -5,6 +5,23 @@ import { addTask } from './add-task.js'
 
 import { createTask } from './create-task.js'
 //this page will be for my buttons to lead to functions located on different modules 
+const tabs = document.querySelectorAll('[data-tab-target]')
+const tabContents = document.querySelectorAll('[data-tab-content')
+
+tabs.forEach(tab => { 
+    tab.addEventListener('click', () => { 
+        const target = document.querySelector(tab.dataset.tabTarget); 
+        tabContents.forEach(tabContent => { 
+            tabContent.classList.remove('active')
+        })
+        tabs.forEach(tab => { 
+            tab.classList.remove('active')
+        })
+        tab.classList.add('active');
+        target.classList.add('active');
+    })
+})
+
 
 
 //NEXT: add project option on pop up form and store each task within specified project 
@@ -12,14 +29,16 @@ import { createTask } from './create-task.js'
 //NEXT: use "localStorage" to save user's prkect between sessions
 
 
-export function Task(title, description, dueDate, priorityLevel) {
+export function Task(title, description, dueDate, priorityLevel, project) {
   this.title = title.value
   this.description = description.value
   this.dueDate = dueDate.value
   this.priorityLevel = priorityLevel
+  this.project = project.value
 };
 
-export let myTasks = []
+
+export let myTasks = [] 
 
 
 const newTask = document.getElementById("newTask");
@@ -32,6 +51,10 @@ submit.addEventListener ('click', () => {
     addTask()
 })
 
+const allProjectsButton = document.getElementById('allProjects'); 
+allProjectsButton.addEventListener('click', () => {
+    loadProjects(); 
+})
 export let priorityLevel = ""
 
 export function priorityCheck() { 
@@ -59,3 +82,5 @@ export function display() {
     }
 }
 
+
+   
